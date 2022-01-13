@@ -181,7 +181,7 @@ def getNameEmojiMessage():
             {
                 "index":i,
                 "productId": productId,
-                "emojiId":
+                "emojiId": f'{lookUpStr.index(nCar)+1 :03}'
 
             }
         )
