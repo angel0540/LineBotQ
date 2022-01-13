@@ -171,14 +171,17 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = ""
+    name = "Angel"
     message = dict()
     message["type"] = "text"
-    message["text"] ={}
+    message["text"] ={''.join('$' for r in range(len(name)))}
     emojis_list = list()
     for i, nChar in enumerate(name):
         emojis_list.append(
             {
+                "index":i,
+                "productId": productId,
+                "emojiId":
 
             }
         )
@@ -236,6 +239,11 @@ def getTaipei101LocationMessage():
 
 def getMRTVideoMessage():
     message = dict()
+    message = {
+    "type": "video",
+    "originalContentUrl": "./static/taipei_101_video.mp4",
+    "previewImageUrl": "./static/taipei_101.jpeg",
+    }
 
     return message
 
